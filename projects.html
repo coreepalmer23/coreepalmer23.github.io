@@ -23,24 +23,124 @@
             </nav>
         </header>
 
-        <main class="construction">
-            <div class="construction-card">
-                <h2>Page Under Development</h2>
-
+        <main class="projects-page">
+            <section class="projects-hero">
+                <h2>Projects</h2>
                 <p>
-                    This section is currently being built and will soon include
-                    baseball analytics projects, visualizations, scouting reports,
-                    and player development research.
+                    A collection of baseball analytics projects that I have done as a part of the Arizona State Baseball 
+                    Analytics team, as well as personal/academic projects.
                 </p>
+            </section>
 
-                <a href="index.html" class="button">
-                    Return Home
-                </a>
-            </div>
+            <section class="featured-projects">
+                <h2 class="projects-section-title">
+                    Featured Projects
+                </h2>
+
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-layout">
+                        <div class="project-info">
+                            <h3>Pitch Classification Model</h3>
+
+                            <p class="project-description">
+                                I developed a machine learning model to classify pitch types using live in-game TrackMan 
+                                data. The model was trained on the 2024 MLB pitch data from Baseball Savant. The overall model
+                                was split into multiple classification stages, with the first stage classifying between
+                                fastballs, offspeed, and breaking balls. Subsequent stages further classified the specific pitch
+                                type within each category. The model used different features in each stage, based on which mix
+                                of features best differentiates between pitches in each specific category. I also created my
+                                own physics features that further help to create distinguish between pitch types.
+                            </p>
+
+                            <div class="project-results">
+                                <h4>Key Results</h4>
+
+                                <ul>
+                                    <li>Group Split Accuracy: 96.3%</li>
+                                    <li>Fastballs Accuracy: 95.4%</li>
+                                    <li>Offspeeds Accuracy: 86.7%</li>
+                                    <li>Breaking Balls Accuracy: 90.0%</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="images/classification.png" alt="Pitch Classification Model">
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Matplotlib</span>
+                            <span>Machine Learning</span>
+                            <span>Feature Engineering</span>
+                        </div>
+
+                        <a href="construction.html" class="project-button">
+                            View Full Project
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Other Categories -->
+            <!--
+            <section class="categories-section">
+                <h2 class="projects-section-title">
+                    Other Project Categories
+                </h2>
+
+                <div class="categories-grid">
+                    <a href="construction.html" class="category-card">
+                        <h3>BLA BLA BLA</h3>
+                        <p>
+                            description bla bla bla but this is for each category of stuff
+                            like a pitching.html for pitching related projects, hitting.html for hitting related projects, etc.
+                        </p>
+                    </a>
+                </div>
+            </section>
+            -->
         </main>
 
         <footer>
             <p>&copy; 2026 Coree Palmer. All rights reserved.</p>
         </footer>
+
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>
+            const modal =
+                document.getElementById("imageModal");
+
+            const modalImg =
+                document.getElementById("modalImg");
+
+            const images =
+                document.querySelectorAll(".project-image img");
+
+            images.forEach(img => {
+                img.addEventListener("click", () => {
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                });
+            });
+
+            document.querySelector(".close")
+                .addEventListener("click", () => {
+                    modal.style.display = "none";
+            });
+
+            modal.addEventListener("click", e => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
     </body>
 </html>

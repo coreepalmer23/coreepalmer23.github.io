@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This website it to act as a living resume to showcase Coree Palmer's past and current analytics projects.">
+        <meta name="description" content="This website it to act as a living resume to showcase Coree Palmer's past and current sports analytics projects.">
 
-        <title>Coree Palmer | Baseball Analytics</title>
+        <title>Coree Palmer | Sports Analytics</title>
 
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <header>
-            <h1><a href="index.html">Coree Palmer | Baseball Analytics</a></h1>
+            <h1><a href="index.html">Coree Palmer | Sports Analytics</a></h1>
 
             <nav>
                 <ul>
@@ -24,36 +24,110 @@
         </header>
 
         <main>
+            <!-- HERO -->
             <section class="hero">
-                <h2>Baseball Analytics & Player Development</h2>
-                <p>
-                    Computational Mathematical Sciences graduate from Arizona
-                    State University focused on baseball analytics, visualization,
-                    and player development.
-                </p>
+                <div class="hero-content">
+                    <h2>
+                        Sports Analytics &
+                        <span>Player Development</span>
+                    </h2>
 
-                <a href="projects.html" class="button">View Projects</a>
+                    <p>
+                        Building data-driven tools for player evaluation, pitch design, scouting, 
+                        and competitive strategy through Python, R, and baseball technology.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="button">View Projects</a>
+                        <a href="resume.html" class="button-secondary">View Resume</a>
+                    </div>
+                </div>
             </section>
 
+            <!-- STATS -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>1</h3>
+                    <p>Year with ASU Baseball</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10+</h3>
+                    <p>Analytics Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Sports Analytics Skills</p>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
             <section class="about">
                 <h3>About Me</h3>
+
                 <p>
-                    I have spent the past year on the Analytics team for Arizona
-                    State Baseball, competing in the Big 12 Conference. We finished
-                    third in the Big 12 regular season and are currently ranked 25th
-                    in the country by D1Baseball.com. I have experience working with
-                    TrackMan, Edgertronic, 643Analytics, Synergy, and Baseball Savant
-                    data to help the coaching staff in whatever capability that may be.
+                    Recent Arizona State University graduate and baseball analyst focused on player 
+                    development, pitch design, and performance modeling. I support coaching decisions 
+                    using TrackMan, Edgertronic, Synergy, Baseball Savant, and custom analytics 
+                    workflows.
                 </p>
-                <p>
-                    I build projects using Python, R, and Excel to analyze player
-                    performance, create visualizations, and perform statistical
-                    modeling.
-                </p>
-                <p>
-                    My interests include pitch design, hitter tendencies, 
-                    stike zone analysis, and player development.
-                </p>
+
+                <div class="skills">
+                    <span>Python</span>
+                    <span>R</span>
+                    <span>Tableau</span>
+                    <span>Excel</span>
+                    <span>Data Visualization</span>
+                    <span>Player Development</span>
+                </div>
+
+                <div class="about-buttons">
+                    <a href="https://www.linkedin.com/in/coree-palmer"
+                       target="_blank"
+                       class="button">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/cpalme28"
+                       target="_blank"
+                       class="button">
+                        GitHub
+                    </a>
+                </div>
+            </section>
+
+            <!-- FEATURED PROJECTS -->
+            <section class="featured-projects">
+                <h3>Featured Projects</h3>
+
+                <div class="featured-grid">
+                    <div class="feature-card">
+                        <h4>Pitch Classification Model</h4>
+                        <p>
+                            Machine learning model written in Python built to classify pitch types 
+                            from movement and other release metrics.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>TrackMan Dashboard Scraper</h4>
+                        <p>
+                            Python script that scrapes live metrics, pertaining to the pitch and 
+                            batted ball, from live TrackMan dashboard.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>NBA Player Status Predictor</h4>
+                        <p>
+                            Linear regression model written in R that classifies a player as 
+                            "elite" or "average" in comparison to rest of league.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="featured-footer">
+                    <a href="projects.html" class="button">View All Projects</a>
+                </div>
             </section>
         </main>
 
