@@ -50,7 +50,8 @@
                                 fastballs, offspeed, and breaking balls. Subsequent stages further classified the specific pitch
                                 type within each category. The model used different features in each stage, based on which mix
                                 of features best differentiates between pitches in each specific category. I also created my
-                                own physics features that further help to create distinguish between pitch types.
+                                own physics features that further help to create distinguish between pitch types. When pitch 
+                                type is unknown, the model defaults to either the group classification or unknown.
                             </p>
 
                             <div class="project-results">
@@ -76,6 +77,46 @@
                             <span>Matplotlib</span>
                             <span>Machine Learning</span>
                             <span>Feature Engineering</span>
+                        </div>
+
+                        <a href="construction.html" class="project-button">
+                            View Full Project
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-layout">
+                        <div class="project-info">
+                            <h3>TrackMan Dashboard Scraper and Plotter</h3>
+
+                            <p class="project-description">
+                                I developed a Python script that scraped live pitch and batted ball metrics from the TrackMan 
+                                Dashboard. It went into the HTML to collect and record various metrics, such as IVB, HB, 
+                                and velocity. It takes HB and IVB to plot the movement of pitches. When combined with the pitch
+                                classification model, it color codes the pitch types for easier visible distinction between
+                                pitches.
+                            </p>
+
+                            <div class="project-results">
+                                <h4>Key Results</h4>
+                                <ul>
+                                    <li>Increased live game tagging efficiency</li>
+                                    <li>Aided in mid-game decision making by coaching staff</li>
+                                    <li>Allowed for easier visualization of a pitcher's live in-game fatigue</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="images/trackman-scraper.png" alt="TrackMan Dashboard Scraper">
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span>tool</span>
+                            <span>tool</span>
                         </div>
 
                         <a href="construction.html" class="project-button">
