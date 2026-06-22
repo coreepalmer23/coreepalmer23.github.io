@@ -28,7 +28,12 @@
                 <h2>Projects</h2>
                 <p>
                     A collection of baseball analytics projects that I have done as a part of the Arizona State Baseball 
-                    Analytics team, as well as personal/academic projects.
+                    Analytics team, as well as personal/academic projects. 
+                </p>    
+                
+                <p>
+                    Note: Portions of some projects done in correspondence with Arizona State Baseball will have redacted 
+                    or anonymized information to protect the integrity and privacy of the team and players.
                 </p>
             </section>
 
@@ -38,20 +43,17 @@
                 </h2>
 
                 <!-- Project 1 -->
-                <article class="project-card">
+                <article id="pitch-classification" class="project-card">
                     <div class="project-layout">
                         <div class="project-info">
                             <h3>Pitch Classification Model</h3>
 
                             <p class="project-description">
                                 I developed a machine learning model to classify pitch types using live in-game TrackMan 
-                                data. The model was trained on the 2024 MLB pitch data from Baseball Savant. The overall model
-                                was split into multiple classification stages, with the first stage classifying between
-                                fastballs, offspeed, and breaking balls. Subsequent stages further classified the specific pitch
-                                type within each category. The model used different features in each stage, based on which mix
-                                of features best differentiates between pitches in each specific category. I also created my
-                                own physics features that further help to create distinguish between pitch types. When pitch 
-                                type is unknown, the model defaults to either the group classification or unknown.
+                                data. The overall model was split into multiple classification stages, with subsequent stages 
+                                being more fine-tuned to the specific pitch. The model used different features in each stage, 
+                                based on which mix of features best differentiates between pitches in each specific category. 
+                                When the pitch type is unknown, the model defaults to either the group classification or unknown.
                             </p>
 
                             <div class="project-results">
@@ -85,7 +87,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article id="trackman-scraper" class="project-card">
                     <div class="project-layout">
                         <div class="project-info">
                             <h3>TrackMan Dashboard Scraper and Plotter</h3>
@@ -120,6 +122,53 @@
                             <span>Matplotlib</span>
                             <span>Selenium</span>
                             <span>JSON</span>
+                        </div>
+
+                        <a href="construction.html" class="project-button">
+                            View Full Project
+                        </a>
+                    </div>
+                </article>
+
+                <article id="nba-status" class="project-card">
+                    <div class="project-layout">
+                        <div class="project-info">
+                            <h3>NBA Player Status Predictor</h3>
+
+                            <p class="project-description">
+                                I built a logistic regression model that determines the status of a player as either "elite" or
+                                "average". I performed preliminary exploratory data analysis to determine which metrics were 
+                                most likely to influence the performance of a player. The player's status is determined by their
+                                statistcal profile from the 2023-2024 season.
+                            </p>
+
+                            <div class="project-results">
+                                <h4>Key Results</h4>
+                                <ul>
+                                    <li>Model Accuracy: 89.4%</li>
+                                    <li>
+                                        A sensitivity of 0.9417 shows that the model is very good at identifying non-elite players, 
+                                        but the specificity of 0.4000 shows that it struggles with identifying elite players
+                                    </li>
+                                    <li>
+                                        The top predictors of players status is playing time (minutes played, games played) and Win 
+                                        Shares (defensive win shares, offensive win shares, win shares)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="images/nba-status.png" alt="NBA Player Predictor Status">
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span>R</span>
+                            <span>Exploratory Data Analysis</span>
+                            <span>RMD</span>
+                            <span>Logistic Regression</span>
                         </div>
 
                         <a href="construction.html" class="project-button">

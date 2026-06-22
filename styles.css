@@ -25,6 +25,10 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* LINKS */
 a {
     color: inherit;
@@ -137,6 +141,13 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 /* BUTTON */
@@ -315,6 +326,16 @@ nav ul li a:hover {
     margin-top: 40px;
 }
 
+.feature-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.feature-link .feature-card {
+    height: 100%;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -402,6 +423,7 @@ footer {
 
     color: var(--muted);
     font-size: 1.1rem;
+    padding-bottom: 15px;
 }
 
 /* SECTION TITLES */
@@ -428,6 +450,7 @@ footer {
     border: 1px solid var(--border);
     border-radius: 24px;
     padding: 40px;
+    margin-bottom: 20px;
 }
 
 .project-card:hover {
