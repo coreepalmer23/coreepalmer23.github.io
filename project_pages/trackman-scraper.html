@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This website it to act as a living resume to showcase Coree Palmer's past and current sports analytics projects.">
+
+        <title>Coree Palmer | Sports Analytics</title>
+
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="index.html">Coree Palmer | Sports Analytics</a></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="projects-page">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <section class="projects-hero">
+                <div>
+                    <h1>TrackMan Dashboard Scraper and Plotter</h1>
+
+                    <p class="project-subtitle">
+                        Python script that scrapes private TrackMan dashboard for live pitch and batted 
+                        ball metrics and then plots IVB vs HB for each pitcher
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>API</span>
+                        <span>TrackMan</span>
+                        <span>Web Scraping</span>
+                    </div>
+                </div>
+
+                <img src="../images/trackman-scraper.png" alt="TrackMan Dashboard Scraper & Plotter">
+            </section>
+
+            <!-- Overview -->
+            <section class="project-section">
+                <h2>Overview</h2>
+
+                <p>
+                    I developed a Python script that scrapes live metrics from the TrackMan dashboard.
+                    The script initially prompts the user for the pitcher's name and offers the user the 
+                    chance to switch pitchers, save the plot, switch from warmup to live mode, and end 
+                    the game. When combined with the Pitch Classification Model I created, it color codes
+                    the plotted points of each pitch by pitch color. It also offers the user the chance to 
+                    override the pitch type in case the model inaccurately classified the pitch type.
+                </p>
+            </section>
+
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>Problem</h2>
+
+                <p>
+                    When facing a pitcher for the first time, it is hard to recognize the movement of their
+                    pitches. By having this opportunitiy to plot the pitches, it is easier to see the grouping
+                    of the pitch's shape for each pitch and aid in the efficiency and accuracy of live in-game
+                    tagging.
+                </p>
+            </section>
+
+            <!-- Approach -->
+            <section class="project-section">
+                <h2>Methodology</h2>
+
+                <ul>
+                    <li>
+                        Access the private TrackMan dashboard link.
+                    </li>
+                    <li>
+                        Inspected the HTML and the unique class identifications to collect
+                        the live metrics.
+                    </li>
+                    <li>
+                        Saves metrics and pitcher's name to a CSV that is later read and used to plot
+                        IVB and HB for each pitcher.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Results -->
+            <section class="project-section">
+                <h2>Results</h2>
+
+                <div class="results-grid">
+                    <div class="metric">
+                        <h3>Increased efficiency</h3>
+                        <p>when tagging live games</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>Aided in decison making</h3>
+                        <p>by pitching coaching staff</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>Easier visualization</h3>
+                        <p>for pitcher's live in-game fatigue</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons -->
+            <section class="project-section">
+                <h2>Future Improvements</h2>
+
+                <p>
+                    The current way that this script scrapes the TrackMan dashboard website requires the 
+                    use of Selenium, which can be contigent on the current state of Google Chrome. When 
+                    Chrome updates, it causes problems with the script. Future versions of this program
+                    could look into different ways of web scraping for this type of an API.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Coree Palmer. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
