@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This website it to act as a living resume to showcase Coree Palmer's past and current sports analytics projects.">
+
+        <title>Coree Palmer | Sports Analytics</title>
+
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="index.html">Coree Palmer | Sports Analytics</a></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="projects-page">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <section class="projects-hero">
+                <div>
+                    <h1>Pitch Classification Model</h1>
+
+                    <p class="project-subtitle">
+                        Multi-stage machine learning pipeline for clasifying pitch types from 
+                        live TrackMan data
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>LightGBM</span>
+                        <span>TrackMan</span>
+                        <span>Feature Engineering</span>
+                    </div>
+                </div>
+
+                <img src="../images/classification.png" alt="Pitch Classification Model">
+            </section>
+
+            <!-- Overview -->
+            <section class="project-section">
+                <h2>Overview</h2>
+
+                <p>
+                    I developed a machine learning model to classify pitch types using live 
+                    in-game TrackMan data. Rather than treating every pitch equally, the model
+                    uses a hierarchical classification structure that progressively narrows 
+                    the possible outcomes at each stage.
+                </p>
+            </section>
+
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>Problem</h2>
+
+                <p>
+                    Live game environments require fast and reliable pitch tagging. Existing 
+                    methods created potential delays and introduced inconsistencies during games.
+                    There was a struggle to balance both accurately selecting the pitch type 
+                    and the rest of the game action.
+                </p>
+            </section>
+
+            <!-- Approach -->
+            <section class="project-section">
+                <h2>Methodology</h2>
+
+                <ul>
+                    <li>
+                        Trained on historical MLB pitch data from the 2024 season (got the data 
+                        from Statcast).
+                    </li>
+                    <li>
+                        Engineered unique physics features to supplment typical pitch metrics.
+                    </li>
+                    <li>
+                        Built a staged classification pipeline in Google Colab using Python.
+                    </li>
+                    <li>
+                        Added confidence thresholds for uncertain pitch types.
+                    </li>
+                    <li>
+                        Use collected TrackMan pitch metrics that were scraped from the live 
+                        dashboard.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Results -->
+            <section class="project-section">
+                <h2>Results</h2>
+
+                <div class="results-grid">
+                    <div class="metric">
+                        <h3>96.3%</h3>
+                        <p>Group Accuracy</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>95.4%</h3>
+                        <p>Fastballs</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>86.7%</h3>
+                        <p>Offspeed</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>90.0%</h3>
+                        <p>Breaking</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons -->
+            <section class="project-section">
+                <h2>Future Improvements</h2>
+
+                <p>
+                    Future versions could incorportate pitcher-specific calibration and real-time 
+                    confidence monitoring. By making the model pitcher-specific, it could increase
+                    accuracy, as well as removing the possibility that the model could assign a 
+                    pitch type that a pitcher doesn't throw (ex: calls a pitch a sinker when they 
+                    only throw a fastball).
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Coree Palmer. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

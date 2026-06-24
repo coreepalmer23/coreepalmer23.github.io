@@ -400,16 +400,25 @@ footer {
 ======================================== */
 
 .projects-page {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 120px 40px 80px;
+    padding: 140px 60px 100px;
 }
 
 /* HERO */
 
 .projects-hero {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 18px;
 }
 
 .projects-hero h2 {
@@ -424,6 +433,78 @@ footer {
     color: var(--muted);
     font-size: 1.1rem;
     padding-bottom: 15px;
+}
+
+.projects-subtitle {
+    color: var(--muted);
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto 28px;
+}
+
+.project-section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.project-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.project-section p, .project-section li {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.project-section ul {
+    padding-left: 24px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.metric {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    transition: .25s ease;
+}
+
+.metric:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.metric h3 {
+    font-size: 2rem;
+    color: var(--accent);
+}
+ 
+.metric p {
+    color: var(--muted);
+}
+
+.projects-hero img {
+    width: 75%;
+    border-radius: 12px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 50px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--accent);
 }
 
 /* SECTION TITLES */
@@ -654,18 +735,22 @@ footer {
 
 .project-tags {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+    margin-top: 35px;
 }
 
 .project-tags span {
     background:rgba(56,189,248,.12);
     color: var(--accent);
 
-    padding: 12px 22px;
+    padding: 10px 18px;
 
     border-radius: 999px;
 
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 /* ========================================
