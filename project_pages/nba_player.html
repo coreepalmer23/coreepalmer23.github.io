@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This website it to act as a living resume to showcase Coree Palmer's past and current sports analytics projects.">
+
+        <title>Coree Palmer | Sports Analytics</title>
+
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="index.html">Coree Palmer | Sports Analytics</a></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="projects-page">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <section class="projects-hero">
+                <div>
+                    <h1>NBA Player Status Predictor</h1>
+
+                    <p class="project-subtitle">
+                        Research project to discover which metrics are most predictive of a player's status as either 
+                        "elite" or "average" in the NBA
+                    </p>
+
+                    <div class="project-tags">
+                        <span>R</span>
+                        <span>RMD</span>
+                        <span>Exploratory Data Analysis</span>
+                        <span>Logistic Regression</span>
+                    </div>
+                </div>
+
+                <img src="../images/nba-status.png" alt="NBA Player Status Predictor">
+            </section>
+
+            <!-- Overview -->
+            <section class="project-section">
+                <h2>Overview</h2>
+
+                <p>
+                    I built a logistic regression model that determines the status of a player as either "elite" or
+                    "average". I performed preliminary exploratory data analysis to determine which metrics were 
+                    most likely to influence the performance of a player. The player's status is determined by their
+                    statistcal profile from the 2023-2024 season.
+                </p>
+            </section>
+
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>Problem</h2>
+
+                <p>
+                    This project was designed to see if a player's status as either "elite" or "average" could be 
+                    predicted based on their statistical profile. 
+                </p>
+            </section>
+
+            <!-- Approach -->
+            <section class="project-section">
+                <h2>Methodology</h2>
+
+                <ul>
+                    <li>
+                        Upload and clean the data to remove any missing values and add the labels for each player as 
+                        either "elite" or "average".
+                    </li>
+                    <li>
+                        Visually explore the data through various plots to see how the metrics are distributed and 
+                        relate to each other.
+                    </li>
+                    <li>
+                        Train the logistic regression model on the training data and evaluate its performance on the test 
+                        data.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Results -->
+            <section class="project-section">
+                <h2>Results</h2>
+
+                <div class="results-grid">
+                    <div class="metric">
+                        <h3>89.4%</h3>
+                        <p>Model Accuracy</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>0.9417</h3>
+                        <p>Model Sensitivity</p>
+                    </div>
+
+                    <div class="metric">
+                        <h3>0.4000</h3>
+                        <p>Model Specificity</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons -->
+            <section class="project-section">
+                <h2>Future Improvements</h2>
+
+                <p>
+                    Due to the class imbalances between "elite" and "average" players, the model is not as effective at 
+                    predicting "elite" players. Future improvements could include using a different model that is better 
+                    suited for imbalanced data, such as a random forest or gradient boosting model. 
+                </p>
+
+                <p>
+                    To expand upon the ideas of this project, it also opens up the door to explore which historic metrics 
+                    are most predictive of a player's status in future seasons. Depending on the performance of the model,
+                    it could even become useful in selecting which players to draft for fantasy leagues based on their 
+                    statistical profile.
+                </p>
+            </section>
+
+            <!-- File Download -->
+            <section class="project-section">
+                <h2>Download Paper for a Deeper Look</h2>
+                
+                <a href="files/Coree_Palmer_Player_Status.pdf" class="button" download>
+                    Download Write-up (PDF)
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Coree Palmer. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
